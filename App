@@ -1,0 +1,25 @@
+import com.MenuJogo.MenuJogo;
+import com.campoMinado.CampoMinado;
+import com.campoMinado.CampoMinadoController;
+import com.campoMinado.CampoMinadoView;
+import com.jogodetabuleiro.Tabuleiro;
+import com.jogodetabuleiro.TabuleiroView;
+
+public class App {
+    public static void main(String[] args) {
+        //JogoDaVelha tabuleiro = new JogoDaVelha();
+        //JogoDaVelhaView view = new JogoDaVelhaView();
+        //JogoDaVelhaController controller = new JogoDaVelhaController(tabuleiro, view);
+
+        MenuJogo menu = new MenuJogo(); // Instancia o menu
+        int dificuldade = menu.executar();        // Executa o menu
+
+        Tabuleiro tabuleiroTeste = new Tabuleiro<>(2+dificuldade*2, 2+dificuldade*2);
+        TabuleiroView tabuViewTeste = new TabuleiroView<>();
+        
+        tabuViewTeste.exibirTabuleiro(tabuleiroTeste);
+
+        //controller.jogar();
+
+    }
+}
