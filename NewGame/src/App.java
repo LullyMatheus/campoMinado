@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
+       
         Scanner sc = new Scanner(System.in);
 
         //Crio um menu
@@ -28,6 +29,8 @@ public class App {
 
         //Realizar jogada
         tabuleiro.realizarJogada();
-        menu.exibirMenu();
+        System.out.println();
+        tabuleiro.mostrarMensagem("Fim de jogo! Até a próxima.");
+        tabuleiro.mostrarMensagem("---------------------------");
     }
 }
